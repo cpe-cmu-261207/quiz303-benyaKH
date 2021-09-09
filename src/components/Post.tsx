@@ -1,5 +1,6 @@
 import Comments from "./Comments"
 import Likesec from "./LikeSec"
+import { CommentType, comments } from "../data/comments";
 
 
 
@@ -25,7 +26,7 @@ const Post = () => {
 
                 </div>
                 {}
-                <Comments />
+                {comments.map(x => <Comments username={x.username} userImagePath={x.userImagePath} commentText={x.commentText} likeNum={x.likeNum} replies={x.replies}/>)}
                 
 
             </div>
